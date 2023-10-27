@@ -1,3 +1,23 @@
+<?php 
+
+$instructions = "Scegliere una password con un minimo di 8 caratteri e un massimo di 32 caratteri";
+
+if(isset($_POST['password_length'])){
+  if($_POST['password_length'] >= 8 && $_POST['password_length'] <= 32 ){
+    echo 'OKKK';
+
+  }else {
+    $instructions = "Errore! La lunghezza della password deve avere un minimo di 8 caratteri e un massimo di 32
+    caratteri";
+  }
+
+
+}
+
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,20 +33,22 @@
       <h1>Strong Password Generator</h1>
       <h2>Genera una password sicura</h2>
       <div class="message">
-        <p>Scegliere una password con un minimo di 8 caratteri e un massimo di 32 caratteri</p>
+        <p><?php echo $instructions ?></p>
       </div>
-      <form action="index.php" method="POST" class="form">
-        <div class="row">
-          <div class="col">
-            <h5>Lunghezza password:</h5>
-            <button type="submit" class="btn btn-primary">Invia</button>
-            <button class="btn btn-secondary">Annulla</button>
+      <div class="form">
+        <form action="index.php" method="POST">
+          <div class="row">
+            <div class="col">
+              <h5>Lunghezza password:</h5>
+              <button type="submit" class="btn btn-primary">Invia</button>
+              <button class="btn btn-secondary">Annulla</button>
+            </div>
+            <div class="col">
+              <input type="number" placeholder="Number" name="password_length" id="password_length">
+            </div>
           </div>
-          <div class="col">
-            <input type="number" name="password_length" id="password_length">
-          </div>
-        </div>
-      </form>
+        </form>
+      </div>
     </div>
   </div>
 </body>
