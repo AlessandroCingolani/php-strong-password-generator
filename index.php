@@ -6,7 +6,7 @@ if(isset($_POST['password_length'])){
   if($_POST['password_length'] >= 8 && $_POST['password_length'] <= 32 ){
     session_start();
     $_SESSION["number_to_generate"] = $_POST['password_length'];
-    header("Location: ./pass-gen.php");s
+    header("Location: ./pass-gen.php");
   }else {
     $instructions = "Errore! La lunghezza della password deve avere un minimo di 8 caratteri e un massimo di 32
     caratteri";

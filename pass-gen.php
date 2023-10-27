@@ -13,9 +13,6 @@ if(isset($_SESSION["number_to_generate"])){
 
 ?>
 
-
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
