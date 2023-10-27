@@ -1,13 +1,12 @@
 <?php 
 
-include __DIR__ .'/partials/functions.php';
-
 $instructions = "Scegliere una password con un minimo di 8 caratteri e un massimo di 32 caratteri";
 
 if(isset($_POST['password_length'])){
   if($_POST['password_length'] >= 8 && $_POST['password_length'] <= 32 ){
-    random_generator($_POST['password_length']);
-    var_dump(random_generator($_POST['password_length']));
+    session_start();
+    $_SESSION["number_to_generate"] = $_POST['password_length'];
+    header("Location: ./pass-gen.php");s
   }else {
     $instructions = "Errore! La lunghezza della password deve avere un minimo di 8 caratteri e un massimo di 32
     caratteri";
