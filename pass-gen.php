@@ -2,7 +2,7 @@
 
 session_start();
 
-if(isset($_SESSION["number_to_generate"])){
+if(isset($_SESSION["pass_to_print"])){
   $pass_output = $_SESSION["pass_to_print"];
 }else {
   header("Location: ./index.php");
