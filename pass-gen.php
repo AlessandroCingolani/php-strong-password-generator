@@ -1,10 +1,9 @@
 <?php
-include __DIR__ .'/partials/functions.php';
+
 session_start();
 
 if(isset($_SESSION["number_to_generate"])){
-  $number_input = $_SESSION["number_to_generate"];
-  $pass_generated = random_generator($number_input);
+  $pass_output = $_SESSION["pass_to_print"];
 }else {
   header("Location: ./index.php");
 }
@@ -28,9 +27,9 @@ if(isset($_SESSION["number_to_generate"])){
     <div class="password-generator text-center ">
       <h2>La password generata è:</h2>
       <div class="message">
-        <span><?php echo $pass_generated ?></span>
+        <span><?php echo $pass_output ?></span>
       </div>
-      <a href="index.php"><button class="btn btn-primary ">Torna alla homepage</button></a>
+      <a href="index.php"><button class="btn btn-info ">Torna alla homepage</button></a>
     </div>
   </div>
 </body>
