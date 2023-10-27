@@ -10,7 +10,10 @@ Creare un form che invii in GET o in POST la lunghezza della password. Una nostr
 Scriviamo tutto (logica e layout) in un unico file index.php
 
 Milestone 2
-Verificato il corretto funzionamento del nostro codice, spostiamo la logica in un file functions.php che includeremo poi nella pagina principale
+Verificato il corretto funzionamento del nostro codice, spostiamo la logica in un file functions.php che includeremo poi nella pagina principale.
+
+Milestone 3 (BONUS)
+Invece di visualizzare la password nella index, effettuare un redirect ad una pagina dedicata che tramite $\_SESSION recupererà la password da mostrare all’utente.
 
 1. Creo pagina form index.php dove imposto il form POST da inviare alla mia pagina di controllo.
 2. Creo una stringa con tutti i caratteri,numeri che ciclerò tramite funzione in modo random per creare la password.
