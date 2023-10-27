@@ -50,7 +50,7 @@ if(isset($_POST['password_length'])){
               <button type="reset" class="btn btn-secondary">Annulla</button>
             </div>
             <div class="col align-self-start ">
-              <input  type="number" placeholder="Number" name="password_length" id="password_length">
+              <input  type="number" placeholder="Numero caratteri" name="password_length" id="password_length">
             </div>
           </div>
         </form>
